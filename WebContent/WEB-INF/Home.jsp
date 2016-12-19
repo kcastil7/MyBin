@@ -51,7 +51,7 @@
 	<th>Amount</th>
 	<th>Inputed by</th>
 	</thead>
-	<a href='ADD' type='button' class="btn btn-primary" id='ADD-button'>ADD</a>
+	<a href='ADD' type='button' class="btn btn-primary" id='ADD-button'>Add New Item</a>
 	<c:forEach items ="${locator}" var="entry">
 	<tr>
 	<td>${entry.getItemNumber()}</td>

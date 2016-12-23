@@ -57,7 +57,7 @@
 									<div class="form-group col-xs-10 col-md-10"
 						" style="color: #FF0000;">${errorMessage}</div>
 					<div class="form-group col-xs-10 col-md-10">
-						<input type="submit" id="ADD" name="ADD" value="ADD" />
+						<input type="submit" value="ADD" />
 					</div>
 					</form>
 				

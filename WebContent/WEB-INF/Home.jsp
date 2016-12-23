@@ -35,13 +35,19 @@
 				<a class='navbar-brand' href='Home'>MyBin</a>
 				<p class='navbar-text'>Signed in as ${sessionScope.username}</p>
 	
-				<a href='Login' type='button' id='logout-button'
+				<a href='Logout' type='button' id='logout-button'
 					class='navbar-btn btn btn-default logout-button navbar-right'>Logout</a>
 				
 
 		</div>
 	</nav>
 	<div class="container">
+		<form action="Search" method="post">
+				<div class ="col-lg-offset-2 ">
+					<input name="search" id="search" class="form-control" placeholder="Search Item Number or Location" /></div>
+					<button class="navbar-btn btn btn-default" name="searchBtn" value="Search" type="submit">Search</button>
+					<button class="navbar-btn btn btn-default" name="Reset" value="Reset" type="submit">Reset</button>
+			</form>
 	
 	<table id = "MyBin" class="table table-striped table-bordered">
 	<thead>
@@ -51,7 +57,7 @@
 	<th>Amount</th>
 	<th>Inputed by</th>
 	</thead>
-	<a href='ADD' type='button' class="btn btn-primary" id='ADD-button'>Add New Item</a>
+	<a href='ADD' type='button' class="btn btn-primary" id='ADD-button'>ADD</a>
 	<c:forEach items ="${locator}" var="entry">
 	<tr>
 	<td>${entry.getItemNumber()}</td>

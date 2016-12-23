@@ -37,34 +37,34 @@
 	</nav>
 <body>
 
-<form action="ADD" method="post">
+
 <c:forEach items ="${Edit}" var="entry">
+<form action="Edit" method="post">
 				<div class="form-group col-xs-3 col-md-3">
-					<label for="itemnumber">Item # <font color="red">*</font>${entry.getItemNumber()}
-					</label> <input type="text" class="form-control" name="itemnumber">
+					<label for="itemnumber">Item # <font color="red">*</font>
+					</label> <input type="text" class="form-control" name="itemnumber" value = "${entry.getItemNumber()}">
 				</div>
 				<div class="form-group col-xs-3 col-md-3">
 					<label for="po">PO #<font color="red">*</font></label>
-					${entry.getPO()}
-					<input type="text" class="form-control" name="po">
+					
+					<input type="text" class="form-control" name="po" value= "${entry.getPO()}">
 				</div>
 				<div class="form-group col-xs-3 col-md-3">
 					<label for="location">Location<font color="red">*</font></label>
-					${entry.getLocation()}
-					<input type="text" class="form-control" name="location">
+					
+					<input type="text" class="form-control" name="location" value = "${entry.getLocation()}">
 				</div>
 				<div class="form-group col-xs-3 col-md-3">
 					<label for="qty">Quantity<font color="red">*</font></label>
-					${entry.getAmount()}
-					<input type="text" class="form-control" name="qty">
+					<input type="text" class="form-control" name="qty" value = "${entry.getAmount()}">
 				</div>
 									<div class="form-group col-xs-10 col-md-10"
 						" style="color: #FF0000;">${errorMessage}</div>
 					<div class="form-group col-xs-10 col-md-10">
-						<input type="submit" id="ADD" name="ADD" value="ADD" />
+						<input type="submit"  value="Edit" />
 					</div>
-					</c:forEach>
 					</form>
+					</c:forEach>
 
 </body>
 </html>
